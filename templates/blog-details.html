@@ -29,9 +29,7 @@
         <div class="col-lg-8">
             <div class="main_blog_details">
                 {% if post.image_url %}
-                  <img class="img-fluid" src={{post.image_url}} alt="">
                 {% else %}
-                  <img class="img-fluid" src="{% static 'img/banner_img/blog.png' %}" alt="">
                 {% endif %}
                 <h4>{{post.title}}</h4>
                 <div class="user_details">
@@ -42,6 +40,8 @@
                         <p>{{post.published_at}}</p>
                       </div>
                     </div>
+              <img class="img-fluid" src={{post.image_url}} alt="{{post.title}}">
+              <img class="img-fluid" src="{% static 'img/banner_img/blog.png' %}" alt="Sensive Blog logo">
                   </div>
                 </div>
                 <p>{{post.text}}</p>
